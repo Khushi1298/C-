@@ -1,39 +1,34 @@
 #include<iostream>
 using namespace std ;
+int facto (int) ;
 int nCr (int , int ) ;
 int main ()
 {
     int n , r ;
-    int ncr ;
     cout << "Enter n : " ;
-    cin >> n ;
-    cout << "Enter r :"  ;
-    cin >> r ;
-    ncr = nCr(n,r) ;
-    cout << "nCr :"<<ncr ;
+    cin>> n ;
+    cout << "Enter r :" ;
+    cin>> r ;
+    int  ncr = nCr(n,r) ;
+    cout <<"Answer = "<<ncr ;
 }
-    int nCr (int a , int b )
+int facto(int n )
+{
+    int fact=1 ;
+     while (n>=1)
     {
-            int fact = 1 ;
-            int afac , bfac ;
-         while (a>0 )
-        {
-             afac = a*fact ;
-             a-- ;
-             cout << afac <<endl ;
-        }
-        while(b>0)
-        {
-             bfac = b*fact ;
-             b-- ;
-             cout << bfac <<endl ;
-        }
-        cout << afac <<bfac ;
-       int  nCr = a/(b*(a-b)) ;
-        return nCr ;
+        fact= n*fact ;
+        n-- ;
     }
-
-
+    return fact ;
+}
+int nCr (int n ,int r)
+{
+    int  up = facto(n) ;
+    int lw = facto(r)*facto(n-r) ;
+    int ans =up/lw ;
+    return ans ;
+}
 
 
 
