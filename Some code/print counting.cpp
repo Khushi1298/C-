@@ -14,5 +14,4 @@ int counting (int n )
     {
         cout << i<<" " ;
     }
-    cout <<endl ;
 }
