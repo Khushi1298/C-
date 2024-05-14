@@ -4,13 +4,21 @@ using namespace std ;
 int main ( )
 {
     int n ;
+    bool prime = true;
     cout << "Enter number :" ;
     cin >> n ;
-    for(int i=1 ;i<n;i++)
-    {
-         if (n%i!=0)
-           cout<< n <<" is Prime Number for " <<i<< endl ;
-        else
-             cout<< n << " is non prime number for "<< i <<endl ;
+    if (n<2)
+        prime = false;
+    for(int i=2;i<n/2+1;i++){
+         if (n%i==0){
+             prime = false;
+            break;
+        }
+    }
+
+    if (prime){
+        cout<< n <<" is Prime Number";
+    } else {
+        cout<< n << " is not Prime Number";
     }
 }
