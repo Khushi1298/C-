@@ -4,24 +4,23 @@ int binary(int a[],int n,int k) ;
 int main()
 {
     int size,k;
-    int arr[ size] ;
     cout<<"Enter Array size :" <<endl;
     cin>> size ;
+    int arr[ size] ;
+    cout<<"Enter elements :"<<endl ;
     for(int i=0;i<size;i++)
-    {
-        cout<<"Enter element :"<<endl ;
         cin>>arr[i] ;
-    }
     cout<<"Enter element to be search:"<<endl ;
     cin>>k ;
     int index= binary(arr,size,k);
-    cout<<index<<endl ;
+    cout<<"element position "<<index<<endl ;
+    return 0 ;
 }
 int binary(int a[],int n,int k)
 {
     int mid;
     int start =0 ;
-    int end =n;
+    int end =n-1;
     mid=(start+end)/2;
     while(start<=end)
     {
@@ -37,5 +36,5 @@ int binary(int a[],int n,int k)
             end=mid-1;
         mid =(start+end)/2;
     }
-    return 0 ;
+    return -1 ;
 }
