@@ -4,6 +4,15 @@ using namespace std ;
 int main()
 {
     vector<int>v ;
+    //vector<int>v(5,1) 5 is size  ans 1 is element that initialize to all
+    vector<int>a(4,5) ;
+    cout<<"VECTOR a"<<endl ;
+        for(int i:a)
+    {
+        cout<<i<<" " ;
+    }
+    cout<<endl<<endl ;
+    cout<<"Vector v"<<endl ;
     cout<<"Capacity-> " <<v.capacity()<<endl ;
     cout<<"SIZE-> " <<v.size()<<endl ;
 
@@ -43,7 +52,9 @@ int main()
     {
         cout<<i<<" " ;
     }
-    cout<<endl ;
-
-
+    cout<<endl<<endl  ;
+    //Clear vector
+       cout<<" Size Before Clear -> "<<v.size()<<endl ;
+    v.clear() ;
+    cout<<" Size After Clear -> "<<v.size()<<endl ;
 }
