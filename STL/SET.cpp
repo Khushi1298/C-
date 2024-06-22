@@ -29,4 +29,11 @@ int main()
     }
     cout<<endl;
     cout<<"SIZE ->"<<t.size() <<endl ;
+    cout<<endl ;
+    t.erase(t.begin());
+      for(auto i: t)
+    {
+        cout<<i<<" "  ;
+    }
+    cout<<endl ;
 }
