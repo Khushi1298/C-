@@ -13,7 +13,7 @@ int main()
         for(j=0;j<=i;j++)
         {
              int  ncr = nCr(i,j) ;
-             cout <<ncr<<" " ;
+             cout<<" " <<ncr<<" " ;
         }
         cout<<endl ;
     }
