@@ -1,14 +1,17 @@
 #include<iostream>
 using namespace std ;
-int sumofsq(int n ) ;
-bool happy(int n) ;
+int sumofsq(int ) ;
+bool happy(int ) ;
 int main()
 {
     int num ;
     cout<<"Enter num :" <<endl ;
     cin>>num ;
-    sumofsq(num) ;
-    happy(num) ;
+    int res = num ;
+    if(res!=1)
+    {
+        res = happy(res) ;
+    }
 }
 int sumofsq(int n )
 {   int sum = 0 ;
@@ -18,10 +21,11 @@ int sumofsq(int n )
         sum+=d*d ;
         n=n/10 ;
     }
+    return sum ;
 }
-bool happpy( int n)
+bool happy( int res)
 {
-    if(n==1)
+    if(res==1)
         return true ;
     else
         return false ;
