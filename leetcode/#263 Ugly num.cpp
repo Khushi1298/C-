@@ -10,7 +10,7 @@ int main()
     cin>>num ;
     primeFactors(num) ;
     if (uglynum(num))
-       cout << "The number is ugly." << endl;
+       cout << "The number is an ugly." << endl;
     else
         cout << "The number is not ugly." << endl;
     return 0;
